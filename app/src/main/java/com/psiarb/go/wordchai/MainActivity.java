@@ -1,6 +1,7 @@
 package com.psiarb.go.wordchai;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -92,11 +93,13 @@ public class MainActivity extends AppCompatActivity implements MiscFragment.Misc
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
 
         System.out.println("**************onCreate called " + ENG_correct[1]);
 
-        typeface = Typeface.createFromAsset(getAssets(),"chibi.ttf");
+        typeface = Typeface.createFromAsset(getAssets(),"banksia.ttf");
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -146,64 +149,22 @@ public class MainActivity extends AppCompatActivity implements MiscFragment.Misc
         System.out.println("**************onStart called " + ENG_correct[1]);
 
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        if(currentUser == null){
-
-
-            Intent startIntent = new Intent(MainActivity.this, StartActivity.class);
-            startActivity(startIntent);
-           finish();
-
-        }
 
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-
-        return true;
-    }
-
-    private void sendToStart() {
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        super.onCreateOptionsMenu(menu);
+//        getMenuInflater().inflate(R.menu.main_menu, menu);
+//
+//        return true;
+//    }
 
 
 
-        Intent startIntent = new Intent(MainActivity.this,StartActivity.class);
-        startActivity(startIntent);
-        finish();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        super.onOptionsItemSelected(item);
-
-        if(item.getItemId() == R.id.main_logout_btn){
-            FirebaseAuth.getInstance().signOut();
-            sendToStart();
-        }
-
-        if(item.getItemId() == R.id.main_settings_btn){
-
-            Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(settingsIntent);
 
 
-        }
-
-        if(item.getItemId() == R.id.main_browse_users_btn){
-
-           Intent browseUsersIntent = new Intent(MainActivity.this, BrowseUsersActivity.class);
-            startActivity(browseUsersIntent);
-
-        }
-
-
-        return true;
-
-    }
 
 
 

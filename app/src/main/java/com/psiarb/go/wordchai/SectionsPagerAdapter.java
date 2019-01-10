@@ -21,9 +21,7 @@ class SectionsPagerAdapter extends FragmentPagerAdapter{
             case 1:
                 MiscFragment MiscFragment = new MiscFragment();
                 return MiscFragment;
-            case 2:
-                ChatFragment ChatFragment = new ChatFragment();
-                return ChatFragment;
+
             default:
                 return null;
         }
@@ -31,7 +29,7 @@ class SectionsPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     public CharSequence getPageTitle(int position){
@@ -42,8 +40,7 @@ class SectionsPagerAdapter extends FragmentPagerAdapter{
                 return "CARDS";
             case 1:
                 return "DECK";
-            case 2:
-                return "CHAT";
+
             default:
                 return null;
         }

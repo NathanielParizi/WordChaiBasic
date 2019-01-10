@@ -614,7 +614,7 @@ public class English_To_Persian {
                 "the transfer\r\n" +
                 "States\r\n" +
                 "Special\r\n" +
-                "D\r\n" +
+                "(Unknown)\r\n" +
                 "Affairs\r\n" +
                 "Introduction\r\n" +
                 "Foreign\r\n" +
@@ -4060,7 +4060,7 @@ public class English_To_Persian {
                 "Cool\r\n" +
                 "Syntax\r\n" +
                 "they said\r\n" +
-                "H\r\n" +
+                "(Unknown)\r\n" +
                 "Feelings\r\n" +
                 "you can\r\n" +
                 "Calcium\r\n" +

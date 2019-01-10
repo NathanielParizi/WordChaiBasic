@@ -36,7 +36,7 @@ public class MiscFragment extends Fragment implements AdapterView.OnItemSelected
     private static StringBuilder sb = new StringBuilder();
 
     private static int mStart;
-    private static int mEnd;
+    private static int mEnd =0;
 
     private static Boolean[] levelBool = new Boolean[5];
 
@@ -159,7 +159,7 @@ public class MiscFragment extends Fragment implements AdapterView.OnItemSelected
 
                 //letterList is basically an array of each deck of cards
 
-                Toast.makeText(getContext(),letterList[i], LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Selected List:" + letterList[i], LENGTH_SHORT).show();
                 countParser  = letterList[i];
                 System.out.println(countParser.indexOf("-"));
 
@@ -339,6 +339,10 @@ public class MiscFragment extends Fragment implements AdapterView.OnItemSelected
               break;
           }
           case "English":{
+              index = 0;
+              break;
+          }
+          case "Japanese":{
               index = 0;
               break;
           }
